@@ -47,7 +47,8 @@ export default function handler(req, res) {
     // .map((el) => el.content)
     // .join("\n");
     try {
-      // var sementicResp = await getSementicSearch(sementicQuery);
+      var sementicResp = "";
+      // sementicResp = await getSementicSearch(sementicQuery);
       var sementicRespPinecone = await getSementicSearchPinecone(sementicQuery);
       sementicResp += sementicRespPinecone;
       // var response = await new Promise((resolve) =>
