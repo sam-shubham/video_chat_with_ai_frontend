@@ -1,0 +1,98 @@
+@keyframes textfloatanimation {
+  0% {
+    bottom: 0rem;
+    opacity: 0;
+  }
+  /* 10% {
+    bottom: calc(var(--bottom) / 10);
+    opacity: 0.2;
+  }
+  20% {
+    bottom: calc(var(--bottom) / 9);
+    opacity: 0.4;
+  }
+  30% {
+    bottom: calc(var(--bottom) / 8);
+    opacity: 0.6;
+  }
+  40% {
+    bottom: calc(var(--bottom) / 7);
+    opacity: 0.7;
+  } */
+  50% {
+    left: calc(var(--left) / 1.09);
+    bottom: calc(var(--bottom));
+    opacity: 1;
+  }
+  /* 60% {
+    bottom: calc(var(--bottom) / 5);
+    opacity: 0.7;
+  }
+  70% {
+    bottom: calc(var(--bottom) / 4);
+    opacity: 0.6;
+  }
+  80% {
+    bottom: calc(var(--bottom) / 3);
+    opacity: 0.5;
+  }
+  90% {
+    bottom: calc(var(--bottom) / 2);
+    opacity: 0.3;
+  } */
+  75% {
+    opacity: 0;
+  }
+  90% {
+    bottom: calc(var(--bottom) * 2);
+    left: calc(var(--left) * 1.05);
+    opacity: 0;
+  }
+  /* 25% {
+    bottom: calc(var(--bottom) / 3);
+    opacity: 0.5;
+  }
+  50% {
+    bottom: calc(var(--bottom) / 2);
+    opacity: 1;
+  }
+  75% {
+    bottom: calc(var(--bottom));
+    opacity: 0.5;
+  }
+  100% {
+    bottom: calc(var(--bottom) * 2);
+    opacity: 0;
+  } */
+}
+@media screen and (max-width: 768px) {
+  @keyframes textfloatanimation {
+    0% {
+      bottom: 0rem;
+      opacity: 0;
+    }
+    50% {
+      left: calc(var(--mobileleft) / 1.09);
+      bottom: calc(var(--mobilebottom));
+      opacity: 1;
+    }
+    75% {
+      opacity: 0;
+    }
+    90% {
+      bottom: calc(var(--mobilebottom) * 2);
+      left: calc(var(--mobileleft) * 1.05);
+      opacity: 0;
+    }
+  }
+}
+.textfloatanimation {
+  animation-name: textfloatanimation;
+  animation-delay: var(--animationdelay);
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+  /* animation-timing-function: ; */
+  /* animation-direction: forwards; */
+  /* animation: 1s ease-in infinite forwards; */
+}
