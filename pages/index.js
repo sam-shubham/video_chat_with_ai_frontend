@@ -634,18 +634,18 @@ export default function Home() {
                   <div className="bg-slate-200 w-[100%] md:w-[60%] p-6 rounded-xl">
                     <form
                       onSubmit={(bookingform) => {
-                        // bookingform.preventDefault();
-                        // setTimeout(() => {
-                        //   alert(
-                        //     "We Have Recevied Your Booking. We Will Contact You Asap For Your Query."
-                        //   );
-                        // }, 200);
+                        bookingform.preventDefault();
+                        setTimeout(() => {
+                          alert(
+                            "We Have Recevied Your Booking. We Will Contact You Asap For Your Query."
+                          );
+                        }, 200);
                       }}
-                      action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
-                      method="POST"
+                      // action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+                      // method="POST"
                       className="flex flex-col gap-[0.8rem]"
                     >
-                      <input type="hidden" name="oid" value="00D1t000000tZ3l" />
+                      {/* <input type="hidden" name="oid" value="00D1t000000tZ3l" />
                       <input
                         type="hidden"
                         name="retURL"
@@ -655,7 +655,7 @@ export default function Home() {
                         type="hidden"
                         name="lead_source"
                         value="bizGpt-Accounting Services"
-                      />
+                      /> */}
 
                       <div
                         className="w-full text-xl"
@@ -685,7 +685,7 @@ export default function Home() {
                           required
                           type="number"
                           className="w-full p-3 rounded-md"
-                          placeholder=""
+                          placeholder="Phone number"
                           name="Phone number"
                         />
                         <select
