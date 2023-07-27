@@ -418,7 +418,7 @@ export default function Home() {
                       )}
                     </div>
                   </div>
-                  {el.role != "user" ? (
+                  {el.role != "user" && el?.userSpecificLink[0] ? (
                     <div className="flex justify-end flex-wrap ">
                       <div className="bg-white p-3 flex flex-col gap-3 rounded-md min-w-[60%] text-black">
                         <h3 className="text-xl">Relevant Links</h3>
