@@ -25,7 +25,7 @@ async function getSementicSearchPinecone(query) {
       )
       .then((d) => d.data);
 
-    return axres.data;
+    return { data: axres.data, userSpecificLink: axres.userSpecificLink };
   } catch (error) {
     return "<<REFERENCES>>";
   }
@@ -40,6 +40,13 @@ export default function handler(req, res) {
       delete ell.allowbuttons;
       return ell;
     });
+    req.body.transcript = req.body.transcript.map((ell) => {
+      var newobj = {};
+      newobj.role = ell.role;
+      newobj.content = ell.content;
+      return newobj;
+    });
+
     var sementicQuery = req.body.transcript.at(-1).content;
     // .splice(-5)
     // .reverse()
@@ -50,7 +57,7 @@ export default function handler(req, res) {
       var sementicResp = "";
       // sementicResp = await getSementicSearch(sementicQuery);
       var sementicRespPinecone = await getSementicSearchPinecone(sementicQuery);
-      sementicResp += sementicRespPinecone;
+      sementicResp += sementicRespPinecone.data;
       // var response = await new Promise((resolve) =>
       getresponsefromopenai(
         openaiSettings,
@@ -63,6 +70,7 @@ export default function handler(req, res) {
               content:
                 response?.data?.choices[0]?.message?.content ||
                 "We Got An Technical Problem. Please Contact Us If This Problem Repeat.",
+              userSpecificLink: sementicRespPinecone.userSpecificLink || [],
             },
           });
         }

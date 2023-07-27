@@ -4,7 +4,7 @@
 
 @import "~@flaticon/flaticon-uicons/css/all/all";
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
@@ -23,7 +23,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #f4f4f4;
+  background: #000;
   /* background: linear-gradient(
       to bottom,
       transparent,
