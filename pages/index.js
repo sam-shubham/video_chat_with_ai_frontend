@@ -149,7 +149,7 @@ export default function Home() {
           <div className="flex md:justify-between gap-[1rem]  md:flex-row flex-col-reverse w-full min-h-[54vh] mt-[2.5rem] px-3 md:px-[2rem]">
             <div className="flex flex-col justify-between w-full md:w-[31rem]">
               <div className="flex flex-col " style={{ fontFamily: "poppins" }}>
-                <h3 className="text-[2rem]">Pakistan's First</h3>
+                <h3 className="text-[2rem]">{`Pakistan's First`}</h3>
                 <h3
                   className="text-[3rem] leading-[1]"
                   style={{ fontFamily: "rubik" }}
@@ -425,7 +425,7 @@ export default function Home() {
                         <div className="flex gap-2 flex-wrap">
                           {el?.userSpecificLink[0]
                             ? el?.userSpecificLink
-                                .slice(0, 5)
+                                .slice(0, 3)
                                 .map((el, indexussplin) => (
                                   <a
                                     href={el}
