@@ -390,7 +390,9 @@ export default function Home() {
                       } p-[1rem] break-words text-black  rounded-br-xl rounded-bl-xl border-2 border-[rgba(0,0,0,0.05)] `}
                       style={{ fontFamily: "rubik" }}
                     >
-                      <h3>{el.content}</h3>
+                      <h3 style={{ "white-space": "break-spaces" }}>
+                        {el.content}
+                      </h3>
 
                       {el.allowbuttons && false ? (
                         <div className="flex gap-[1rem] justify-end p-3 mt-[0.5rem]">
