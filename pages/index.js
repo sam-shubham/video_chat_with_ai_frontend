@@ -173,8 +173,142 @@ export default function Home() {
                 </h3>
               </div>
             </div>
-            <div className="grid place-items-center md:absolute top-[38%] left-1/2 md:-translate-y-1/2 md:-translate-x-1/2">
-              <img className="w-[24rem]" src="/24justice.png" alt="" />
+            <div className="grid relative place-items-center md:absolute top-[38%] md:left-1/2 md:-translate-y-1/2 md:-translate-x-1/2">
+              <div>
+                {/* <div className="absolute rounded-full z-[1] h-[0.3rem] w-[0.3rem] bg-[#bea559] right-1/2 top-0 -translate-y-1/2 /-translate-x-1/2"></div> */}
+                {/* <div className="absolute rounded-full z-[1] h-[0.3rem] w-[0.3rem] bg-[#bea559] top-1/2 right-0 -translate-y-1/2 /-translate-x-1/2"></div> */}
+                <div
+                  style={{
+                    animation: "sparkeanim 2s infinite",
+                    animationDelay: "0.1s",
+                    "--topstart": "40%",
+                    "--topend": "80%",
+                  }}
+                  className="absolute rounded-full z-[1] h-[0.2rem] w-[0.2rem] bg-[#bea559] top-1/2 -translate-y-1/2 /-translate-x-1/2"
+                />
+                <div
+                  style={{
+                    animation: "sparkeanim 2.9s infinite",
+                    animationDelay: "0s",
+                    "--topstart": "20%",
+                    "--topend": "50%",
+                  }}
+                  className="absolute rounded-full z-[1] h-[0.2rem] w-[0.2rem] bg-[#bea559] top-1/2 -translate-y-1/2 /-translate-x-1/2"
+                />
+                <div
+                  style={{
+                    animation: "sparkeanim 2.7s infinite",
+                    animationDelay: "0.8s",
+                    "--topstart": "10%",
+                    "--topend": "30%",
+                  }}
+                  className="absolute rounded-full z-[1] h-[0.2rem] w-[0.2rem] bg-[#bea559] top-1/2 -translate-y-1/2 /-translate-x-1/2"
+                />
+                <div
+                  style={{
+                    animation: "sparkeanim 2.4s infinite",
+                    animationDelay: "0.5s",
+                    "--topstart": "50%",
+                    "--topend": "80%",
+                  }}
+                  className="absolute rounded-full z-[1] h-[0.2rem] w-[0.2rem] bg-[#bea559] top-1/2 -translate-y-1/2 /-translate-x-1/2"
+                />
+                <div
+                  style={{
+                    animation: "sparkeanim 2.2s infinite",
+                    animationDelay: "0.2s",
+                    "--topstart": "70%",
+                    "--topend": "90%",
+                  }}
+                  className="absolute rounded-full z-[1] h-[0.2rem] w-[0.2rem] bg-[#bea559] top-1/2 -translate-y-1/2 /-translate-x-1/2"
+                />
+                <div
+                  style={{
+                    animation: "sparkeanim 2/5s infinite",
+                    animationDelay: "0.3s",
+                    "--topstart": "40%",
+                    "--topend": "60%",
+                  }}
+                  className="absolute rounded-full z-[1] h-[0.2rem] w-[0.2rem] bg-[#bea559] top-1/2 -translate-y-1/2 /-translate-x-1/2"
+                />
+                <div
+                  style={{
+                    animation: "sparkeanim 2s infinite",
+                    animationDelay: "0.4s",
+                    "--topstart": "20%",
+                    "--topend": "40%",
+                  }}
+                  className="absolute rounded-full z-[1] h-[0.2rem] w-[0.2rem] bg-[#bea559] top-1/2 -translate-y-1/2 /-translate-x-1/2"
+                />
+                {
+                  // ----------------right_pane----------------------
+                }
+                <div
+                  style={{
+                    animation: "sparkeanimright 2.4s infinite",
+                    animationDelay: "0.2s",
+                    "--topstart": "40%",
+                    "--topend": "80%",
+                  }}
+                  className="absolute rounded-full z-[1] h-[0.2rem] w-[0.2rem] bg-[#bea559] top-1/2 -translate-y-1/2 /-translate-x-1/2"
+                />
+                <div
+                  style={{
+                    animation: "sparkeanimright 2.2s infinite",
+                    animationDelay: "0.1s",
+                    "--topstart": "20%",
+                    "--topend": "50%",
+                  }}
+                  className="absolute rounded-full z-[1] h-[0.2rem] w-[0.2rem] bg-[#bea559] top-1/2 -translate-y-1/2 /-translate-x-1/2"
+                />
+                <div
+                  style={{
+                    animation: "sparkeanimright 2.3s infinite",
+                    animationDelay: "0s",
+                    "--topstart": "10%",
+                    "--topend": "30%",
+                  }}
+                  className="absolute rounded-full z-[1] h-[0.2rem] w-[0.2rem] bg-[#bea559] top-1/2 -translate-y-1/2 /-translate-x-1/2"
+                />
+                <div
+                  style={{
+                    animation: "sparkeanimright 2.2s infinite",
+                    animationDelay: "0.8s",
+                    "--topstart": "50%",
+                    "--topend": "80%",
+                  }}
+                  className="absolute rounded-full z-[1] h-[0.2rem] w-[0.2rem] bg-[#bea559] top-1/2 -translate-y-1/2 /-translate-x-1/2"
+                />
+                <div
+                  style={{
+                    animation: "sparkeanimright 2s infinite",
+                    animationDelay: "0.5s",
+                    "--topstart": "70%",
+                    "--topend": "90%",
+                  }}
+                  className="absolute rounded-full z-[1] h-[0.2rem] w-[0.2rem] bg-[#bea559] top-1/2 -translate-y-1/2 /-translate-x-1/2"
+                />
+                <div
+                  style={{
+                    animation: "sparkeanimright 2.8s infinite",
+                    animationDelay: "0.4s",
+                    "--topstart": "40%",
+                    "--topend": "60%",
+                  }}
+                  className="absolute rounded-full z-[1] h-[0.2rem] w-[0.2rem] bg-[#bea559] top-1/2 -translate-y-1/2 /-translate-x-1/2"
+                />
+                <div
+                  style={{
+                    animation: "sparkeanimright 2.5s infinite",
+                    animationDelay: "0.3s",
+                    "--topstart": "20%",
+                    "--topend": "40%",
+                  }}
+                  className="absolute rounded-full z-[1] h-[0.2rem] w-[0.2rem] bg-[#bea559] top-1/2 -translate-y-1/2 /-translate-x-1/2"
+                />
+                {/* <div className="absolute z-[1] h-[1rem] w-[1rem] bg-red-400 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"></div> */}
+              </div>
+              <img className="w-[24rem]" src="/24justice_orignal.png" alt="" />
             </div>
             <div className="pr-[2.5rem] md:block hidden">
               <div className="flex flex-col justify-between h-full">
@@ -270,7 +404,7 @@ export default function Home() {
             </div>
           </div>
           {/* <div className="block h-[3.5rem] w-full" /> */}
-          <div className="fixed md:fixed bottom-0 z-[2] pb-[2rem] bg-[#000] left-0 right-0 px-[1rem] md:px-[15rem] justify-center">
+          <div className="fixed md:fixed bottom-0 z-[2] pb-[2rem] bg-[#000] left-0 right-0 px-[0.2rem] md:px-[15rem] justify-center">
             <div className="flex flex-col gap-[2rem] w-full items-center">
               <div className="w-full">
                 <form
@@ -313,7 +447,7 @@ export default function Home() {
                     <button
                       type="submit"
                       style={{ fontFamily: "rubik" }}
-                      className="text-black right-2.5 md:min-w-[9rem]  bottom-2.5 py-[0.67rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-lg text-sm px-4 /py-2 "
+                      className="text-black right-2.5 md:min-w-[9rem]  bottom-2.5 py-[0.67rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-lg text-sm px-2 min-w-[30%] md:px-4 /py-2 "
                     >
                       Ask Question
                       {/* <i class="fi fi-rs-paper-plane flex items-center"></i> */}
@@ -394,26 +528,26 @@ export default function Home() {
                         {el.content}
                       </h3>
 
-                      {el.allowbuttons && false ? (
+                      {el.allowbuttons ? (
                         <div className="flex gap-[1rem] justify-end p-3 mt-[0.5rem]">
                           <button
                             onClick={() => {
                               setShowBookingForm(true);
                             }}
-                            className="bg-blue-700 text-white p-3 text-xs md:text-base rounded-md hover:scale-[1.03] transition-all duration-300"
+                            className="bg-black text-white p-3 text-xs md:text-base rounded-md hover:scale-[1.03] transition-all duration-300"
                             style={{ fontFamily: "rubik" }}
                           >
                             Talk to a consultant
                           </button>
-                          <button
+                          {/* <button
                             onClick={() => {
                               window.open("https://adamglobal.com");
                             }}
-                            className="bg-blue-700 text-white p-3 text-xs md:text-base rounded-md hover:scale-[1.03] transition-all duration-300"
+                            className="bg-black text-white p-3 text-xs md:text-base rounded-md hover:scale-[1.03] transition-all duration-300"
                             style={{ fontFamily: "rubik" }}
                           >
                             Claim free tax guide
-                          </button>
+                          </button> */}
                         </div>
                       ) : (
                         <></>
@@ -448,9 +582,9 @@ export default function Home() {
                 </>
               ))}
 
-              {ShowBookingForm && false ? (
+              {ShowBookingForm ? (
                 <div className={`flex justify-end`}>
-                  <div className="bg-slate-200 w-[100%] md:w-[60%] p-6 rounded-xl">
+                  <div className="bg-[#DBBE67] text-black w-[100%] md:w-[60%] p-6 rounded-xl">
                     <form
                       onSubmit={(bookingform) => {
                         bookingform.preventDefault();
@@ -533,7 +667,7 @@ export default function Home() {
                         type="text"
                         className="w-full p-3 rounded-md"
                       /> */}
-                        <select
+                        {/* <select
                           name="Business"
                           required
                           className="w-full p-3 rounded-md"
@@ -548,7 +682,7 @@ export default function Home() {
                           <option value="Off-shore">Offshore</option>
                           <option value="Other">Other</option>
                           <option value="None">None</option>
-                        </select>
+                        </select> */}
                         <textarea
                           type="text"
                           className="w-full p-3 rounded-md"
@@ -557,7 +691,7 @@ export default function Home() {
                       </div>
                       <div className="w-full flex justify-end">
                         <button
-                          className="bg-[#083c83] text-md px-4 py-2 rounded-md text-white"
+                          className="bg-[#000] text-md px-4 py-2 rounded-md text-white"
                           style={{ fontFamily: "rubik" }}
                         >
                           Submit
@@ -570,7 +704,7 @@ export default function Home() {
                 <></>
               )}
             </div>
-            <div className="fixed md:fixed bottom-0 z-[2] mb-[2rem] bg-[#000] left-0 right-0 px-[1rem] md:px-[15rem] justify-center">
+            <div className="fixed md:fixed bottom-0 z-[2] mb-[2rem] bg-[#000] left-0 right-0 px-[0.2rem] md:px-[15rem] justify-center">
               <div className="flex flex-col gap-[2rem] w-full items-center">
                 <div className="w-full">
                   <form
@@ -613,7 +747,7 @@ export default function Home() {
                       <button
                         type="submit"
                         style={{ fontFamily: "rubik" }}
-                        className="text-black right-2.5 md:min-w-[9rem]  bottom-2.5 py-[0.67rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-lg text-sm px-4 /py-2 "
+                        className="text-black right-2.5 md:min-w-[9rem]  bottom-2.5 py-[0.67rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-lg text-sm px-2 min-w-[30%] md:px-4 /py-2 "
                       >
                         Ask Question
                         {/* <i class="fi fi-rs-paper-plane flex items-center"></i> */}

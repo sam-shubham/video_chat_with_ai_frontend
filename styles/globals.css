@@ -44,3 +44,32 @@ body {
   background-clip: content-box;
   background: gray;
 }
+
+@keyframes sparkeanim {
+  0% {
+    top: var(--topstart);
+    left: 2rem;
+  }
+  50% {
+    left: 0rem;
+  }
+  100% {
+    opacity: 0;
+    top: var(--topend);
+    left: -1rem;
+  }
+}
+@keyframes sparkeanimright {
+  0% {
+    top: var(--topstart);
+    right: 2rem;
+  }
+  50% {
+    right: 0rem;
+  }
+  100% {
+    opacity: 0;
+    top: var(--topend);
+    right: -1rem;
+  }
+}

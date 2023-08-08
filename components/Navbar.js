@@ -4,8 +4,8 @@ import React from "react";
 const Navbar = () => {
   return (
     <div>
-      <div className="hidden bg-[#000] z-[10] md:flex fixed left-[50%] translate-x-[-50%] w-[100%] justify-center py-[0.6rem] /w-[70%]">
-        <div className="flex bg-[#000] gap-[5rem] px-[2rem] w-full justify-between items-center mt-[0.5rem]">
+      <div className=" bg-[#000] z-[10] md:flex fixed left-[50%] translate-x-[-50%] w-[100%] justify-center py-[0.6rem] /w-[70%]">
+        <div className="flex bg-[#000] gap-[5rem] px-[2rem] w-full justify-center md:justify-between items-center mt-[0.5rem]">
           {
             //     <div className="flex flex-col items-center ">
             //     {/* <Link href={"/"}>
@@ -30,9 +30,10 @@ const Navbar = () => {
             //   </div>
           }
           <div
-            className="font-semibold flex gap-[2rem]"
+            className="font-semibold hidden md:flex gap-[2rem]"
             style={{ fontFamily: "rubik" }}
           >
+            <img asrc="/dxb.png" alt="" />
             <Link href={"/"}>
               <h3 className="cursor-pointer text-[#DBBE67] hover:border-opacity-100 border-opacity-0 transition-all duration-300 border-black border-b-2 border-transparent">
                 Home
@@ -51,6 +52,13 @@ const Navbar = () => {
             </h3>
           </div>
           <div className="mx-[2rem] flex gap-[1rem]">
+            <button
+              onClick={() => {
+                window.open("https://wa.me/+923085510031");
+              }}
+            >
+              <i class="fi fi-brands-whatsapp flex items-center text-xl text-white hover:text-[#DBBE67] transition-all duration-300 cursor-pointer"></i>
+            </button>
             <div>
               <i class="fi fi-brands-linkedin flex items-center text-xl text-white hover:text-[#DBBE67] transition-all duration-300 cursor-pointer"></i>
             </div>
@@ -63,6 +71,7 @@ const Navbar = () => {
             <div>
               <i class="fi fi-brands-instagram flex items-center text-xl text-white hover:text-[#DBBE67] transition-all duration-300 cursor-pointer"></i>
             </div>
+
             {/* <div className="flex gap-[0.7rem] items-center">
               <button
                 style={{ fontFamily: "kanit" }}
