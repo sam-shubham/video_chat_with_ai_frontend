@@ -377,7 +377,7 @@ export default function Home() {
                   setHomepage(false);
                   sendmessage("How can I claim my inherited land in Pakistan?");
                 }}
-                className="p-3 bg-[#f2f2f2] hover:bg-[#DBBE67] transition-all duration-300 cursor-pointer rounded-md"
+                className="p-3 bg-[#000] text-white hover:bg-[rgba(255,255,255,0.2)] hover:bg-[#DBBE67] transition-all duration-300 cursor-pointer rounded-md"
               >
                 How can I claim my inherited land in Pakistan?
               </button>
@@ -386,7 +386,7 @@ export default function Home() {
                   setHomepage(false);
                   sendmessage("How can I file for a Divorce in Pakistan?");
                 }}
-                className="p-3 bg-[#f2f2f2] hover:bg-[#DBBE67] transition-all duration-300 cursor-pointer rounded-md"
+                className="p-3 bg-[#000] text-white hover:bg-[rgba(255,255,255,0.2)] hover:bg-[#DBBE67] transition-all duration-300 cursor-pointer rounded-md"
               >
                 How can I file for a Divorce in Pakistan?
               </button>
@@ -397,7 +397,7 @@ export default function Home() {
                     "Tell me more about Child Custody Laws in Pakistan?"
                   );
                 }}
-                className="p-3 bg-[#f2f2f2] hover:bg-[#DBBE67] transition-all duration-300 cursor-pointer rounded-md"
+                className="p-3 bg-[#000] text-white hover:bg-[rgba(255,255,255,0.2)] /hover:bg-[#DBBE67] transition-all duration-300 cursor-pointer rounded-md"
               >
                 Tell me more about Child Custody Laws in Pakistan?
               </button>
