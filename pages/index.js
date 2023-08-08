@@ -224,7 +224,7 @@ export default function Home() {
                 />
                 <div
                   style={{
-                    animation: "sparkeanim 2/5s infinite",
+                    animation: "sparkeanim 2.5s infinite",
                     animationDelay: "0.3s",
                     "--topstart": "40%",
                     "--topend": "60%",
