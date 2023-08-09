@@ -447,7 +447,7 @@ export default function Home() {
                     <button
                       type="submit"
                       style={{ fontFamily: "rubik" }}
-                      className="text-black right-2.5 md:min-w-[9rem]  bottom-2.5 py-[0.67rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-lg text-sm px-2 min-w-[30%] md:px-4 /py-2 "
+                      className="absolute text-black right-2.5 md:min-w-[9rem]  bottom-2.5 py-[0.5rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-md text-sm px-2 min-w-[30%] md:px-4 /py-2 "
                     >
                       Ask Question
                       {/* <i class="fi fi-rs-paper-plane flex items-center"></i> */}
@@ -747,7 +747,7 @@ export default function Home() {
                       <button
                         type="submit"
                         style={{ fontFamily: "rubik" }}
-                        className="text-black right-2.5 md:min-w-[9rem]  bottom-2.5 py-[0.67rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-lg text-sm px-2 min-w-[30%] md:px-4 /py-2 "
+                        className="absolute text-black right-2.5 md:min-w-[9rem]  bottom-2.5 py-[0.5rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-md text-sm px-2 min-w-[30%] md:px-4 /py-2 "
                       >
                         Ask Question
                         {/* <i class="fi fi-rs-paper-plane flex items-center"></i> */}
