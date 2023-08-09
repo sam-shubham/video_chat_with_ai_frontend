@@ -417,7 +417,7 @@ export default function Home() {
                   className="w-full"
                   id="Main-Home-Inputform-For-Bizgpt"
                 >
-                  <div className="relative w-full flex gap-2">
+                  <div className="relative mx-auto w-[90%] flex gap-2">
                     <div className="absolute flex  inset-y-0 left-0 items-center pl-3 pointer-events-none">
                       <svg
                         aria-hidden="true"
@@ -439,7 +439,7 @@ export default function Home() {
                       type="search"
                       id="default-search"
                       name="bizgpt-input"
-                      className="block w-full p-4 pl-10 outline-none text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 chatMessageButton"
+                      className="block w-full py-[1.2rem] /md:py-4 pr-4  pl-10 outline-none md:text-sm text-xs text-gray-900 border border-gray-300 rounded-lg bg-gray-50 chatMessageButton"
                       placeholder="Ask 24 Justice  a question"
                       style={{ fontFamily: "rubik" }}
                       required
@@ -447,7 +447,7 @@ export default function Home() {
                     <button
                       type="submit"
                       style={{ fontFamily: "rubik" }}
-                      className="absolute text-black right-2.5 md:min-w-[9rem]  bottom-2.5 py-[0.5rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-md text-sm px-2 min-w-[30%] md:px-4 /py-2 "
+                      className="absolute text-black right-2.5 md:min-w-[9rem]  bottom-2.5 md:py-[0.7rem] py-[0.5rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-md text-sm px-2 min-w-[30%] md:px-4 /py-2 "
                     >
                       Ask Question
                       {/* <i class="fi fi-rs-paper-plane flex items-center"></i> */}
@@ -717,7 +717,7 @@ export default function Home() {
                     className="w-full"
                     id="Main-Home-Inputform-For-Bizgpt"
                   >
-                    <div className="relative w-full flex gap-2">
+                    <div className="relative mx-auto w-[90%] flex gap-2 /m-4">
                       <div className="absolute flex  inset-y-0 left-0 items-center pl-3 pointer-events-none">
                         <svg
                           aria-hidden="true"
@@ -739,7 +739,7 @@ export default function Home() {
                         type="search"
                         id="default-search"
                         name="bizgpt-input"
-                        className="block w-full p-4 pl-10 outline-none text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 chatMessageButton"
+                        className="block w-full py-[1.2rem] /md:py-4 pr-4  pl-10 outline-none md:text-sm text-xs text-gray-900 border border-gray-300 rounded-lg bg-gray-50 chatMessageButton"
                         placeholder="Ask 24 Justice  a question"
                         style={{ fontFamily: "rubik" }}
                         required
@@ -747,7 +747,7 @@ export default function Home() {
                       <button
                         type="submit"
                         style={{ fontFamily: "rubik" }}
-                        className="absolute text-black right-2.5 md:min-w-[9rem]  bottom-2.5 py-[0.5rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-md text-sm px-2 min-w-[30%] md:px-4 /py-2 "
+                        className="absolute text-black right-2.5 md:min-w-[9rem]  bottom-2.5 md:py-[0.7rem] py-[0.5rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-md text-sm px-2 min-w-[30%] md:px-4 /py-2 "
                       >
                         Ask Question
                         {/* <i class="fi fi-rs-paper-plane flex items-center"></i> */}
