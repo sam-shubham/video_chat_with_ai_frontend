@@ -43,8 +43,8 @@ export default function Home() {
     var h3 = document.createElement("div");
     div.className = "flex justify-end bizgpt-response";
     h3.className =
-      "text-lg max-w-[60%] bg-[#DBBE67] break-words text-white p-[1rem] rounded-tl-xl rounded-br-xl rounded-bl-xl border-2 border-[rgba(0,0,0,0.05)]";
-    h3.innerHTML = `<div class="flex  gap-[0.5rem] py-[0.7rem] "><div
+      "text-lg max-w-[60%] bg-[#DBBE67] break-words text-white p-[0.5rem] md:p-[1rem] rounded-tl-xl rounded-br-xl rounded-bl-xl border-2 border-[rgba(0,0,0,0.05)]";
+    h3.innerHTML = `<div class="flex  md:gap-[0.5rem] gap-[0.3rem] py-[0.7rem] "><div
     class="bg-[#000]  p-3   w-4 h-4 rounded-full  animate-bounce blue-circle" style="animation-delay: 0.1s;padding:0;width:1rem;height:1rem;"
   ></div>
   <div
@@ -521,7 +521,7 @@ export default function Home() {
                         el.role == "user"
                           ? "bg-[#f2f2f2] rounded-tr-xl"
                           : "bg-[#DBBE67]  text-black rounded-tl-xl"
-                      } p-[1rem] break-words text-black  rounded-br-xl rounded-bl-xl border-2 border-[rgba(0,0,0,0.05)] `}
+                      } p-[0.5rem] md:p-[1rem] break-words text-black  rounded-br-xl rounded-bl-xl border-2 border-[rgba(0,0,0,0.05)] `}
                       style={{ fontFamily: "rubik" }}
                     >
                       <h3 style={{ "white-space": "break-spaces" }}>
@@ -529,7 +529,7 @@ export default function Home() {
                       </h3>
 
                       {el.allowbuttons ? (
-                        <div className="flex gap-[1rem] justify-end p-3 mt-[0.5rem]">
+                        <div className="flex gap-[1rem] justify-end mt-[0.3rem] md:p-3 md:mt-[0.5rem]">
                           <button
                             onClick={() => {
                               setShowBookingForm(true);
