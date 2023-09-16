@@ -59,18 +59,41 @@ const Navbar = () => {
             >
               <i class="fi fi-brands-whatsapp flex items-center text-xl text-white hover:text-[#DBBE67] transition-all duration-300 cursor-pointer"></i>
             </button>
-            <div>
+            <button
+              onClick={() =>
+                window.open("https://pk.linkedin.com/company/24justice.pk")
+              }
+            >
               <i class="fi fi-brands-linkedin flex items-center text-xl text-white hover:text-[#DBBE67] transition-all duration-300 cursor-pointer"></i>
-            </div>
-            <div>
+            </button>
+            <button
+              onClick={() =>
+                window.open("https://m.facebook.com/24Justice.pk/")
+              }
+            >
               <i class="fi fi-brands-facebook flex items-center text-xl text-white hover:text-[#DBBE67] transition-all duration-300 cursor-pointer"></i>
-            </div>
-            <div>
+            </button>
+            <button
+              onClick={() => window.open("https://twitter.com/24Justicepk")}
+            >
               <i class="fi fi-brands-twitter flex items-center text-xl text-white hover:text-[#DBBE67] transition-all duration-300 cursor-pointer"></i>
-            </div>
-            <div>
+            </button>
+            <button
+              onClick={() =>
+                window.open("https://www.instagram.com/24justice.pk/")
+              }
+            >
               <i class="fi fi-brands-instagram flex items-center text-xl text-white hover:text-[#DBBE67] transition-all duration-300 cursor-pointer"></i>
-            </div>
+            </button>
+            <button
+              onClick={() =>
+                window.open(
+                  "https://youtube.com/c/24JusticeLawyersandLegalServices"
+                )
+              }
+            >
+              <i class="fi fi-brands-youtube flex items-center text-xl text-white hover:text-[#DBBE67] transition-all duration-300 cursor-pointer"></i>
+            </button>
 
             {/* <div className="flex gap-[0.7rem] items-center">
               <button

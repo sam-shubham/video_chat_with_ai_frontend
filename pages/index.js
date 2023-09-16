@@ -22,7 +22,18 @@ export default function Home() {
       new URL(document.URL).protocol + "//" + new URL(document.URL).hostname
     );
   }, []);
-
+  function extractInputs(mainel, submitobj) {
+    mainel.childNodes.forEach((el) => {
+      if (el.childElementCount == 0 || el.tagName == "SELECT") {
+        if (el.getAttribute("name")) {
+          submitobj[el.getAttribute("name")] = el.value;
+        }
+      } else {
+        extractInputs(el, submitobj);
+      }
+    });
+    return submitobj;
+  }
   var sendmessage = async (msg) => {
     let newArr = [...allmsg, { role: "user", content: msg.trim() }];
     // setAllmsg(newArr);
@@ -586,30 +597,26 @@ export default function Home() {
                 <div className={`flex justify-end`}>
                   <div className="bg-[#DBBE67] text-black w-[100%] md:w-[60%] p-6 rounded-xl">
                     <form
-                      onSubmit={(bookingform) => {
+                      onSubmit={async (bookingform) => {
                         bookingform.preventDefault();
-                        setTimeout(() => {
-                          alert(
-                            "We Have Recevied Your Booking. We Will Contact You Asap For Your Query."
-                          );
-                        }, 200);
+                        // var submitobj = {};
+                        var submitobj = extractInputs(
+                          bookingform.currentTarget,
+                          {}
+                        );
+
+                        var { data: axres } = await axios.post(
+                          "/api/addRowsSheets",
+                          submitobj
+                        );
+                        if (axres.status) {
+                          toast.success("Sucessfully sent");
+                        } else {
+                          toast.error("Error occured");
+                        }
                       }}
-                      // action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
-                      // method="POST"
                       className="flex flex-col gap-[0.8rem]"
                     >
-                      {/* <input type="hidden" name="oid" value="00D1t000000tZ3l" />
-                      <input
-                        type="hidden"
-                        name="retURL"
-                        value={`${CurrentLocation}/thankyou`}
-                      />
-                      <input
-                        type="hidden"
-                        name="lead_source"
-                        value="bizGpt-Accounting Services"
-                      /> */}
-
                       <div
                         className="w-full text-xl"
                         style={{ fontFamily: "rubik" }}
@@ -687,6 +694,7 @@ export default function Home() {
                           type="text"
                           className="w-full p-3 rounded-md"
                           placeholder="What additional information can you provide?"
+                          name="additional info"
                         />
                       </div>
                       <div className="w-full flex justify-end">
