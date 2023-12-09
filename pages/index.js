@@ -606,7 +606,7 @@ export default function Home() {
                         );
 
                         var { data: axres } = await axios.post(
-                          "/api/addRowsSheets",
+                          "/api/sendEmail",
                           submitobj
                         );
                         if (axres.status) {
@@ -645,17 +645,17 @@ export default function Home() {
                           required
                           type="number"
                           className="w-full p-3 rounded-md"
-                          placeholder="Phone number"
+                          placeholder="Phone number (including country code)"
                           name="Phone number"
                         />
                         <select
-                          name="Nationality"
+                          name="Contacting from"
                           required
                           className="w-full p-3 rounded-md"
                           // defaultValue={"Your nationality"}
                         >
                           <option disabled selected value={""}>
-                            Your nationality
+                            Where are you currently contacting us from?
                           </option>
                           {allCounties.map((el) => (
                             <option
@@ -694,7 +694,7 @@ export default function Home() {
                           type="text"
                           className="w-full p-3 rounded-md"
                           placeholder="What additional information can you provide?"
-                          name="additional info"
+                          name="Additional info"
                         />
                       </div>
                       <div className="w-full flex justify-end">
