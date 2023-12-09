@@ -3,7 +3,7 @@ import { createRouter, expressWrapper } from "next-connect";
 const router = createRouter();
 router.post(async (req, res) => {
   try {
-    // await sendMail(req.body);
+    await sendMail(req.body);
     res.send({ status: true });
   } catch (error) {
     res.send({ status: false });
