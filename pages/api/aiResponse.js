@@ -9,20 +9,19 @@ const configuration = new Configuration({
 });
 
 const openai = new OpenAIApi(configuration);
-async function getSementicSearch(query) {
-  var axres = await axios
-    .post("http://localhost:4090/api/SementicSearch/QuerySearch", { query })
-    .then((d) => d.data);
+// async function getSementicSearch(query) {
+//   var axres = await axios
+//     .post("http://localhost:4090/api/SementicSearch/QuerySearch", { query })
+//     .then((d) => d.data);
 
-  return axres?.msg == "Sementic Search Error" ? "<<REFERENCES>>" : axres?.msg;
-}
-async function getSementicSearchPinecone(query) {
+//   return axres?.msg == "Sementic Search Error" ? "<<REFERENCES>>" : axres?.msg;
+// }
+async function getSementicSearch(query) {
   try {
     var axres = await axios
-      .post(
-        "http://localhost:4090/api/ScrapWebsite/querySementicSearchPinecone",
-        { query }
-      )
+      .post("http://localhost:4090/api/ScrapWebsite/querySementicSearch", {
+        query,
+      })
       .then((d) => d.data);
 
     return { data: axres.data, userSpecificLink: axres.userSpecificLink };
@@ -56,8 +55,8 @@ export default function handler(req, res) {
     try {
       var sementicResp = "";
       // sementicResp = await getSementicSearch(sementicQuery);
-      var sementicRespPinecone = await getSementicSearchPinecone(sementicQuery);
-      sementicResp += sementicRespPinecone.data;
+      var sementicdataResp = await getSementicSearch(sementicQuery);
+      sementicResp += sementicdataResp.data;
       // var response = await new Promise((resolve) =>
       getresponsefromopenai(
         openaiSettings,
@@ -70,7 +69,7 @@ export default function handler(req, res) {
               content:
                 response?.data?.choices[0]?.message?.content ||
                 "We Got An Technical Problem. Please Contact Us If This Problem Repeat.",
-              userSpecificLink: sementicRespPinecone.userSpecificLink || [],
+              userSpecificLink: sementicdataResp.userSpecificLink || [],
             },
           });
         }

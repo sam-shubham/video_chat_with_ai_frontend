@@ -4,13 +4,16 @@ import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import allCounties from "@/libs/database/allCounties";
 import { toast } from "react-toastify";
+import { useRouter } from "next/router";
 
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  var router = useRouter();
   const [CurrentLocation, setCurrentLocation] = useState("");
   const [Homepage, setHomepage] = useState(true);
   const [allmsg, setAllmsg] = useState([]);
+  const [SendingMail, setSendingMail] = useState(false);
   const [ShowBookingForm, setShowBookingForm] = useState(false);
   var randomfloatarray = useMemo(() => ["-7rem", "-7.5rem", "56.7rem"], []);
   var randomfloatarraymobile = useMemo(
@@ -528,11 +531,11 @@ export default function Home() {
                     key={Math.random() + JSON.stringify(el)}
                   >
                     <div
-                      className={`text-sm md:text-lg max-w-[100%] md:max-w-[60%] ${
+                      className={`text-sm md:text-sm max-w-[100%] md:max-w-[60%] ${
                         el.role == "user"
-                          ? "bg-[#f2f2f2] rounded-tr-xl"
-                          : "bg-[#DBBE67]  text-black rounded-tl-xl"
-                      } p-[0.5rem] md:p-[1rem] break-words text-black  rounded-br-xl rounded-bl-xl border-2 border-[rgba(0,0,0,0.05)] `}
+                          ? "bg-[#f2f2f2] rounded-tr-md"
+                          : "bg-[#DBBE67]  text-black rounded-tl-md"
+                      } p-[0.5rem] md:p-[0.7rem] break-words text-black  rounded-br-md rounded-bl-md border-2 border-[rgba(0,0,0,0.05)] `}
                       style={{ fontFamily: "rubik" }}
                     >
                       <h3 style={{ "white-space": "break-spaces" }}>
@@ -545,7 +548,7 @@ export default function Home() {
                             onClick={() => {
                               setShowBookingForm(true);
                             }}
-                            className="bg-black text-white p-3 text-xs md:text-base rounded-md hover:scale-[1.03] transition-all duration-300"
+                            className="bg-black text-white p-3 text-xs md:text-xs rounded-md hover:scale-[1.03] transition-all duration-300"
                             style={{ fontFamily: "rubik" }}
                           >
                             Talk to a consultant
@@ -563,33 +566,34 @@ export default function Home() {
                       ) : (
                         <></>
                       )}
+                      {el.role != "user" && el?.userSpecificLink[0] ? (
+                        <div className="flex justify-end flex-wrap ">
+                          <div className="/bg-white p-2 flex flex-col gap-3 rounded-md w-full /max-w-[60%] text-black">
+                            <hr className="bg-[#a7914f] text-[#a7914f] h-[1px] border-0" />
+                            <h3 className="text-md">Relevant Links</h3>
+                            <div className="flex gap-2 flex-wrap">
+                              {el?.userSpecificLink[0]
+                                ? el?.userSpecificLink
+                                    .slice(0, 4)
+                                    .map((el, indexussplin) => (
+                                      <a
+                                        href={el}
+                                        target="_blank"
+                                        key={Math.random + indexussplin}
+                                        className="p-2 w-fit hover:text-[#ffef77] blue-600    text-xs line-clamp-1 bg-[#a7914f]  text-white shadow-inner rounded-md transition-all duration-200"
+                                      >
+                                        {el}
+                                      </a>
+                                    ))
+                                : ""}
+                            </div>
+                          </div>
+                        </div>
+                      ) : (
+                        ""
+                      )}
                     </div>
                   </div>
-                  {el.role != "user" && el?.userSpecificLink[0] ? (
-                    <div className="flex justify-end flex-wrap ">
-                      <div className="bg-white p-3 flex flex-col gap-3 rounded-md min-w-[60%] text-black">
-                        <h3 className="text-xl">Relevant Links</h3>
-                        <div className="flex gap-2 flex-wrap">
-                          {el?.userSpecificLink[0]
-                            ? el?.userSpecificLink
-                                .slice(0, 3)
-                                .map((el, indexussplin) => (
-                                  <a
-                                    href={el}
-                                    target="_blank"
-                                    key={Math.random + indexussplin}
-                                    className="p-2 w-fit  text-sm line-clamp-1 bg-[#f2f2f2] text-black rounded-md"
-                                  >
-                                    {el}
-                                  </a>
-                                ))
-                            : ""}
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    ""
-                  )}
                 </>
               ))}
 
@@ -604,15 +608,35 @@ export default function Home() {
                           bookingform.currentTarget,
                           {}
                         );
-
-                        var { data: axres } = await axios.post(
-                          "/api/sendEmail",
-                          submitobj
-                        );
-                        if (axres.status) {
-                          toast.success("Sucessfully sent");
+                        if (!SendingMail) {
+                          var toastid = toast.loading("Sending Enquiry...");
+                          setSendingMail(true);
+                          var { data: axres } = await axios.post(
+                            "/api/sendEmail",
+                            submitobj
+                          );
+                          if (axres.status) {
+                            setSendingMail(false);
+                            toast.update(toastid, {
+                              render: "Sucessfully sent",
+                              type: "success",
+                              isLoading: false,
+                              autoClose: 1000,
+                            });
+                            router.push({ pathname: "/MailSent" });
+                            // toast.success("Sucessfully sent");
+                          } else {
+                            setSendingMail(false);
+                            toast.update(toastid, {
+                              render: "Error occured",
+                              type: "error",
+                              isLoading: false,
+                              autoClose: 1000,
+                            });
+                            // toast.error("Error occured");
+                          }
                         } else {
-                          toast.error("Error occured");
+                          toast.warning("Already In Progress");
                         }
                       }}
                       className="flex flex-col gap-[0.8rem]"
