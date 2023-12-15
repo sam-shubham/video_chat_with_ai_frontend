@@ -11,6 +11,15 @@ export default function Document() {
           rel="stylesheet"
         />
         <link rel="icon" href="/24justice.png" sizes="any" />
+        <script src="/googleTAG.js" />
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MPJNXBNB"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
       </Head>
       <body>
         <Main />
