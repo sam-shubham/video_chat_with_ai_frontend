@@ -11,7 +11,7 @@ export default function Document() {
           rel="stylesheet"
         />
         <link rel="icon" href="/24justice.png" sizes="any" />
-        <script src="/googleTAG.js" />
+        <script src="/googleTAG.js" async />
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MPJNXBNB"
