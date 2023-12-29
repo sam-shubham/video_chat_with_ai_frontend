@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default function Document() {
   return (
@@ -12,26 +13,23 @@ export default function Document() {
         />
         <link rel="icon" href="/24justice.png" sizes="any" />
         {/* <script src="/googleTAG.js" async /> */}
-        <script
+        <Script
           async
+          type="text/javascript"
           src="https://www.googletagmanager.com/gtag/js?id=G-KCR23HVG1T"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KCR23HVG1T');`,
-          }}
-        ></script>
-        <noscript>
+        ></Script>
+        <Script>{`window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KCR23HVG1T');`}</Script>
+        {/* <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MPJNXBNB"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
-        </noscript>
+        </noscript> */}
       </Head>
       <body>
         <Main />
