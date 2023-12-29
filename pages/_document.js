@@ -16,13 +16,14 @@ export default function Document() {
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-KCR23HVG1T"
         ></script>
-        <script>
-          {`window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
-  gtag('config', 'G-KCR23HVG1T');`}
-        </script>
+  gtag('config', 'G-KCR23HVG1T');`,
+          }}
+        ></script>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MPJNXBNB"
