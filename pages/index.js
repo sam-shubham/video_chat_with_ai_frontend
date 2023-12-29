@@ -6,6 +6,7 @@ import allCounties from "@/libs/database/allCounties";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import Script from "next/script";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -158,6 +159,11 @@ export default function Home() {
 
   return (
     <div className="min-h-[100vh] w-full bg-[#000] md:overflow-auto overflow-hidden">
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-KCR23HVG1T" />
+      <Script id="google-tag">{`window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KCR23HVG1T');`}</Script>
       <Head>
         <title>24justice</title>
       </Head>
