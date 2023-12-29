@@ -14,8 +14,7 @@ export default function Document() {
         <link rel="icon" href="/24justice.png" sizes="any" />
         {/* <script src="/googleTAG.js" async /> */}
         <Script
-          async
-          type="text/javascript"
+          defer
           src="https://www.googletagmanager.com/gtag/js?id=G-KCR23HVG1T"
         ></Script>
         <Script id="google-tag">{`window.dataLayer = window.dataLayer || [];
