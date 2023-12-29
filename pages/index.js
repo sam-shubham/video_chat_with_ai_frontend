@@ -5,6 +5,7 @@ import axios from "axios";
 import allCounties from "@/libs/database/allCounties";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -157,6 +158,9 @@ export default function Home() {
 
   return (
     <div className="min-h-[100vh] w-full bg-[#000] md:overflow-auto overflow-hidden">
+      <Head>
+        <title>24justice</title>
+      </Head>
       <div className="block h-0 md:h-[5rem]" />
       {Homepage ? (
         <div>
@@ -579,7 +583,7 @@ export default function Home() {
                                       <a
                                         href={el}
                                         target="_blank"
-                                        key={Math.random + indexussplin}
+                                        key={Math.random() + indexussplin}
                                         className="p-2 w-fit hover:text-[#ffef77] blue-600    text-xs line-clamp-1 bg-[#a7914f]  text-white shadow-inner rounded-md transition-all duration-200"
                                       >
                                         {el}

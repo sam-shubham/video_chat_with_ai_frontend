@@ -11,7 +11,18 @@ export default function Document() {
           rel="stylesheet"
         />
         <link rel="icon" href="/24justice.png" sizes="any" />
-        <script src="/googleTAG.js" async />
+        {/* <script src="/googleTAG.js" async /> */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-KCR23HVG1T"
+        ></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KCR23HVG1T');`}
+        </script>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MPJNXBNB"
