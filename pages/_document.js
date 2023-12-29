@@ -13,10 +13,7 @@ export default function Document() {
         />
         <link rel="icon" href="/24justice.png" sizes="any" />
         {/* <script src="/googleTAG.js" async /> */}
-        <Script
-          defer
-          src="https://www.googletagmanager.com/gtag/js?id=G-KCR23HVG1T"
-        ></Script>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-KCR23HVG1T" />
         <Script id="google-tag">{`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
