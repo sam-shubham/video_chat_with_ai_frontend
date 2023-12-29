@@ -18,7 +18,7 @@ export default function Document() {
           type="text/javascript"
           src="https://www.googletagmanager.com/gtag/js?id=G-KCR23HVG1T"
         ></Script>
-        <Script>{`window.dataLayer = window.dataLayer || [];
+        <Script id="google-tag">{`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-KCR23HVG1T');`}</Script>
