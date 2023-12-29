@@ -159,11 +159,12 @@ export default function Home() {
 
   return (
     <div className="min-h-[100vh] w-full bg-[#000] md:overflow-auto overflow-hidden">
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-KCR23HVG1T" />
-      <Script id="google-tag">{`window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-KCR23HVG1T');`}</Script>
+      {/* <Script src="https://www.googletagmanager.com/gtag/js?id=G-KCR23HVG1T" /> */}
+      <Script id="google-tag">{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MPJNXBNB');`}</Script>
       <Head>
         <title>24justice</title>
       </Head>
