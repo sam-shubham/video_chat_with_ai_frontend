@@ -159,11 +159,11 @@ export default function Home() {
 
   return (
     <div className="min-h-[100vh] w-full bg-[#000] md:overflow-auto overflow-hidden">
-      <Script src="https://www.googletagmanager.com/gtag/js?id=GTM-MPJNXBNB" />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-P4JSKSFJD0" />
       <Script id="google-tag">{`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'GTM-MPJNXBNB');`}</Script>
+gtag('config', 'G-P4JSKSFJD0');`}</Script>
       <Head>
         <title>24justice</title>
       </Head>
