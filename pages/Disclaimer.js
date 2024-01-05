@@ -50,7 +50,10 @@ const Disclaimer = () => {
               {`Welcome to 24justice.com, an experimental AI-driven platform designed to offer general legal advice. This service is provided by 24Justice.`}
             </h3>
             {policyArray.map((el) => (
-              <div className="flex flex-col gap-[0.3rem] mt-[2rem]">
+              <div
+                key={el.title + el.desc}
+                className="flex flex-col gap-[0.3rem] mt-[2rem]"
+              >
                 <h3
                   className="text-xl text-semibold"
                   style={{ fontFamily: "rubik" }}
