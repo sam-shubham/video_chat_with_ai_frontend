@@ -616,7 +616,7 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
                                         href={el}
                                         target="_blank"
                                         key={Math.random() + indexussplin}
-                                        className="p-2 w-fit hover:text-[#ffef77] blue-600    text-xs line-clamp-1 bg-[#a7914f]  text-white shadow-inner rounded-md transition-all duration-200"
+                                        className="p-2 w-fit hover:text-[#ffef77] blue-600 flex   text-xs line-clamp-1 bg-[#a7914f]  text-white shadow-inner rounded-md transition-all duration-200"
                                       >
                                         {el}
                                       </a>
