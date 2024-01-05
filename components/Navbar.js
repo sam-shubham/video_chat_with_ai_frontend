@@ -1,34 +1,13 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 const Navbar = () => {
+  var router = useRouter();
   return (
     <div>
       <div className=" bg-[#000] z-[10] md:flex fixed left-[50%] translate-x-[-50%] w-[100%] justify-center py-[0.6rem] /w-[70%]">
-        <div className="flex bg-[#000] gap-[5rem] px-[2rem] w-full justify-center md:justify-between items-center mt-[0.5rem]">
-          {
-            //     <div className="flex flex-col items-center ">
-            //     {/* <Link href={"/"}>
-            //       <img
-            //         alt="AdamGlobal"
-            //         src="/ADAM Global.png"
-            //         className="h-[3.5rem] /tracking-wider"
-            //       />
-            //     </Link> */}
-            //     {/* <h3
-            //   style={{ fontFamily: "kanit" }}
-            //   className="text-4xl bg-black text-white px-[1rem] /tracking-wider"
-            // >
-            //   BIZGPT
-            // </h3> */}
-            //     {/* <h3
-            //   className="text-[8px] tracking-wider"
-            //   style={{ fontFamily: "rubik" }}
-            // >
-            //   BUSINESS SETUP WITH NO REGRETS
-            // </h3> */}
-            //   </div>
-          }
+        <div className="flex bg-[#000] md:gap-[5rem] px-[2rem] w-full justify-center md:justify-between items-center mt-[0.5rem]">
           <div
             className="font-semibold hidden md:flex gap-[2rem]"
             style={{ fontFamily: "rubik" }}
@@ -53,7 +32,20 @@ const Navbar = () => {
               </h3>
             </Link>
           </div>
-          <div className="mx-[2rem] flex gap-[1rem]">
+          <div>
+            <div
+              onClick={() => {
+                window.open("/", "_self");
+              }}
+              className="flex gap-[0.5rem] justify-center items-center md:hidden  mr-[2rem]"
+            >
+              <img src="/24justice_orignal.png" className="w-[2rem]" alt="" />
+              <h3 className="text-[#DBBE67]" style={{ fontFamily: "rubik" }}>
+                24Justice
+              </h3>
+            </div>
+          </div>
+          <div className="md:mx-[2rem] flex gap-[1rem]">
             <button
               onClick={() => {
                 window.open("https://wa.me/+923085510031");
