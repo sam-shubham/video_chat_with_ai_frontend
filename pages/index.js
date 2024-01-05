@@ -172,14 +172,14 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
       <div className="block h-0 md:h-[5rem]" />
       {Homepage ? (
         <div>
-          <div className="fixed right-[1rem] md:right-[2rem] bottom-[6rem] md:bottom-[2rem] z-[99]">
+          <div className="fixed right-[0.7rem] md:right-[2rem] bottom-[6.2rem] md:bottom-[2rem] z-[99]">
             <div
               onClick={() => {
                 window.open("https://wa.me/+923085510031");
               }}
-              className="p-[1.5rem] cursor-pointer shadow-inner animate-pulse /border-[#2ab13f] /border-2 bg-[#2ab13f] rounded-full"
+              className="p-[1rem] md:p-[1.5rem] cursor-pointer shadow-inner animate-pulse /border-[#2ab13f] /border-2 bg-[#2ab13f] rounded-full"
             >
-              <i className="fi fi-brands-whatsapp  flex items-center text-[2.5rem] text-white transition-all duration-300 "></i>
+              <i className="fi fi-brands-whatsapp  flex items-center text-[1.5rem] md:text-[2.5rem] text-white transition-all duration-300 "></i>
             </div>
           </div>
           <div className="flex md:justify-between gap-[1rem]  md:flex-row flex-col-reverse w-full min-h-[54vh] mt-[2.5rem] px-3 md:px-[2rem]">
