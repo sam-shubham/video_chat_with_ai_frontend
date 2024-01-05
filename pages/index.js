@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Script from "next/script";
+import Link from "next/link";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -167,9 +168,20 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
       <Head>
         <title>24justice</title>
       </Head>
+
       <div className="block h-0 md:h-[5rem]" />
       {Homepage ? (
         <div>
+          <div className="fixed right-[1rem] md:right-[2rem] bottom-[6rem] md:bottom-[2rem] z-[99]">
+            <div
+              onClick={() => {
+                window.open("https://wa.me/+923085510031");
+              }}
+              className="p-[1.5rem] cursor-pointer shadow-inner animate-pulse /border-[#2ab13f] /border-2 bg-[#2ab13f] rounded-full"
+            >
+              <i className="fi fi-brands-whatsapp  flex items-center text-[2.5rem] text-white transition-all duration-300 "></i>
+            </div>
+          </div>
           <div className="flex md:justify-between gap-[1rem]  md:flex-row flex-col-reverse w-full min-h-[54vh] mt-[2.5rem] px-3 md:px-[2rem]">
             <div className="flex flex-col justify-between w-full md:w-[31rem]">
               <div className="flex flex-col " style={{ fontFamily: "poppins" }}>
@@ -191,10 +203,24 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
                   24Justice. For personalized, specific legal advice, contact us
                   via WhatsApp +92 308 5510031.`}
                 </h3>
-                <h3>
-                  {`By using our site, you agree to our Terms and Conditions and
-                  agree to our disclaimer`}
-                </h3>
+                <span className="whitespace-nowrap flex gap-[0.5rem] flex-wrap">
+                  <h3>{`By using our site, you agree to our `}</h3>
+                  <Link
+                    href="/PrivacyPolicy"
+                    className="text-blue-500 underline"
+                  >
+                    Terms and Conditions
+                  </Link>
+                  <span className="flex gap-[0.5rem] flex-wrap">
+                    <h3>{`and agree to our `}</h3>
+                    <Link
+                      href={"/Disclaimer"}
+                      className="text-blue-500 underline"
+                    >
+                      disclaimer
+                    </Link>
+                  </span>
+                </span>
               </div>
             </div>
             <div className="grid relative place-items-center md:absolute top-[38%] md:left-1/2 md:-translate-y-1/2 md:-translate-x-1/2">
@@ -365,7 +391,7 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
                       className=" text-slate-300"
                       style={{ fontFamily: "poppins" }}
                     >
-                      Years of experience
+                      Legal Platform in Pakistan
                     </h3>
                   </div>
                 </div>
@@ -441,7 +467,7 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
                   className="w-full"
                   id="Main-Home-Inputform-For-Bizgpt"
                 >
-                  <div className="relative mx-auto w-[90%] flex gap-2">
+                  <div className="relative mx-auto w-full md:w-[90%] flex gap-2">
                     <div className="absolute flex  inset-y-0 left-0 items-center pl-3 pointer-events-none">
                       <svg
                         aria-hidden="true"
@@ -463,7 +489,7 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
                       type="search"
                       id="default-search"
                       name="bizgpt-input"
-                      className="block w-full py-[1.2rem] /md:py-4 pr-4  pl-10 outline-none md:text-sm text-xs text-gray-900 border border-gray-300 rounded-lg bg-gray-50 chatMessageButton"
+                      className="block w-full py-[1.2rem] /md:py-4  pr-2 /pr-4  pl-10 outline-none md:text-sm text-xs text-gray-900 border border-gray-300 rounded-lg bg-gray-50 chatMessageButton"
                       placeholder="Ask 24 Justice  a question"
                       style={{ fontFamily: "rubik" }}
                       required
@@ -471,7 +497,7 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
                     <button
                       type="submit"
                       style={{ fontFamily: "rubik" }}
-                      className="absolute text-black right-2.5 md:min-w-[9rem]  bottom-2.5 md:py-[0.7rem] py-[0.5rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-md text-sm px-2 min-w-[30%] md:px-4 /py-2 "
+                      className="/absolute whitespace-nowrap text-black right-2.5 md:min-w-[9rem]  bottom-2.5 md:py-[0.7rem] py-[0.5rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-md text-sm px-2 min-w-[30%] md:px-4 /py-2 "
                     >
                       Ask Question
                       {/* <i class="fi fi-rs-paper-plane flex items-center"></i> */}
@@ -759,7 +785,7 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
                     className="w-full"
                     id="Main-Home-Inputform-For-Bizgpt"
                   >
-                    <div className="relative mx-auto w-[90%] flex gap-2 /m-4">
+                    <div className="relative mx-auto w-full md:w-[90%] flex gap-2 /m-4">
                       <div className="absolute flex  inset-y-0 left-0 items-center pl-3 pointer-events-none">
                         <svg
                           aria-hidden="true"
@@ -781,7 +807,7 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
                         type="search"
                         id="default-search"
                         name="bizgpt-input"
-                        className="block w-full py-[1.2rem] /md:py-4 pr-4  pl-10 outline-none md:text-sm text-xs text-gray-900 border border-gray-300 rounded-lg bg-gray-50 chatMessageButton"
+                        className="block w-full py-[1.2rem] /md:py-4  pr-2 /pr-4  pl-10 outline-none md:text-sm text-xs text-gray-900 border border-gray-300 rounded-lg bg-gray-50 chatMessageButton"
                         placeholder="Ask 24 Justice  a question"
                         style={{ fontFamily: "rubik" }}
                         required
@@ -789,7 +815,7 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
                       <button
                         type="submit"
                         style={{ fontFamily: "rubik" }}
-                        className="absolute text-black right-2.5 md:min-w-[9rem]  bottom-2.5 md:py-[0.7rem] py-[0.5rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-md text-sm px-2 min-w-[30%] md:px-4 /py-2 "
+                        className="/absolute text-black right-2.5 md:min-w-[9rem]  bottom-2.5 md:py-[0.7rem] py-[0.5rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-md text-sm px-2 min-w-[30%] md:px-4 /py-2 "
                       >
                         Ask Question
                         {/* <i class="fi fi-rs-paper-plane flex items-center"></i> */}

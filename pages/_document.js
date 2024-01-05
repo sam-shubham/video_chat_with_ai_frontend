@@ -21,6 +21,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <meta name="title" content="24Justice" />
+        <meta name="descriptions" content="Pakistan’s First Legal AI Site" />
         <meta name="og:title" content="24Justice" />
         <meta name="og:type" content="website" />
         <meta name="og:url" content="https://24justice.com" />
