@@ -23,7 +23,11 @@ const Disclaimer = () => {
           `We use Google Analytics and Search Console for data analysis and future improvements. Please review our `,
         ],
         [
-          <Link href="/PrivacyPolicy" className="text-blue-500 underline">
+          <Link
+            key={Math.floor(Math.random() * 9999)}
+            href="/PrivacyPolicy"
+            className="text-blue-500 underline"
+          >
             Privacy and policy page
           </Link>,
         ],
@@ -76,7 +80,11 @@ const Disclaimer = () => {
                   className="whitespace-break-spaces text-slate-200"
                   style={{ fontFamily: "Lato" }}
                 >
-                  {el.desc}
+                  {typeof el.desc == "string"
+                    ? el.desc
+                    : el.desc.map((curr) => {
+                        return curr;
+                      })}
                   {
                     //   typeof el.desc == "string"
                     //     ? el.desc
