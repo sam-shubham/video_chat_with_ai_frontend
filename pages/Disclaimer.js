@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Disclaimer = () => {
@@ -16,7 +17,18 @@ const Disclaimer = () => {
     },
     {
       title: "Data Use and Privacy",
-      desc: `We use Google Analytics and Search Console for data analysis and future improvements. Please review our *** for detailed information on how we handle your data.`,
+
+      desc: [
+        [
+          `We use Google Analytics and Search Console for data analysis and future improvements. Please review our `,
+        ],
+        [
+          <Link href="/PrivacyPolicy" className="text-blue-500 underline">
+            Privacy and policy page
+          </Link>,
+        ],
+        [` for detailed information on how we handle your data.`],
+      ],
     },
     {
       title: "Jurisdiction",
@@ -34,15 +46,15 @@ const Disclaimer = () => {
   ]);
   return (
     <div>
-      <div className="p-[1.5rem] pt-[5rem]  overflow-y-scroll h-[100vh]">
+      <div className="md:p-[1.5rem] p-[0.5rem] pt-[5rem] md:pt-[5rem]  overflow-y-scroll h-[100vh]">
         <h3
-          className="text-4xl text-bold text-[#DBBE67]"
+          className="md:text-4xl text-2xl text-bold text-[#DBBE67]"
           style={{ fontFamily: "rubik" }}
         >
           Legal Advice Disclaimer
         </h3>
         <div className="mt-[0.2rem] pb-[5rem]">
-          <div className="overflow-y-auto ">
+          <div className="overflow-y-auto md:text-base text-xs">
             <h3
               className="whitespace-break-spaces text-slate-200"
               style={{ fontFamily: "Josefin Sans" }}
@@ -51,21 +63,31 @@ const Disclaimer = () => {
             </h3>
             {policyArray.map((el) => (
               <div
-                key={el.title + el.desc}
+                key={el.title + (el.desc || "")}
                 className="flex flex-col gap-[0.3rem] mt-[2rem]"
               >
                 <h3
-                  className="text-xl text-semibold"
+                  className="md:text-xl text-base text-semibold"
                   style={{ fontFamily: "rubik" }}
                 >
                   {el.title}
                 </h3>
-                <h3
+                <div
                   className="whitespace-break-spaces text-slate-200"
                   style={{ fontFamily: "Lato" }}
                 >
                   {el.desc}
-                </h3>
+                  {
+                    //   typeof el.desc == "string"
+                    //     ? el.desc
+                    //     : () => {
+                    //         const content = el.desc.reduce((combined, elem) => {
+                    //           return content + elem;
+                    //         });
+                    //         return "asd";
+                    //       }
+                  }
+                </div>
               </div>
             ))}
           </div>

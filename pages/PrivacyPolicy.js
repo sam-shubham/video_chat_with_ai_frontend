@@ -41,15 +41,15 @@ const PrivacyPolicy = () => {
   ]);
   return (
     <div>
-      <div className="p-[1.5rem] pt-[5rem]  overflow-y-scroll h-[100vh]">
+      <div className="md:p-[1.5rem] p-[0.5rem] pt-[5rem] md:pt-[5rem]  overflow-y-scroll h-[100vh]">
         <h3
-          className="text-4xl text-bold text-[#DBBE67]"
+          className="md:text-4xl text-2xl text-bold text-[#DBBE67]"
           style={{ fontFamily: "rubik" }}
         >
           GDPR Cookies and Privacy Policy
         </h3>
         <div className="mt-[0.2rem] pb-[5rem]">
-          <div className="overflow-y-auto ">
+          <div className="overflow-y-auto md:text-base text-xs">
             <h3
               className="whitespace-break-spaces text-slate-200"
               style={{ fontFamily: "Josefin Sans" }}
@@ -58,7 +58,7 @@ const PrivacyPolicy = () => {
             </h3>
             {policyArray.map((el) => (
               <div
-                key={el.title + el.desc}
+                key={el.title + (el.desc || "")}
                 className="flex flex-col gap-[0.3rem] mt-[2rem]"
               >
                 <h3
