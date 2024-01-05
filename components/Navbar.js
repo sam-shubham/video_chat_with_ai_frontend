@@ -39,7 +39,7 @@ const Navbar = () => {
                 Home
               </h3>
             </Link>
-            <Link href={"/"}>
+            <Link href={"/Disclaimer"}>
               <h3 className="cursor-pointer hover:border-opacity-100 border-opacity-0 transition-all duration-300 border-black border-b-2 border-transparent">
                 Disclaimer
               </h3>
@@ -47,9 +47,11 @@ const Navbar = () => {
             <h3 className="cursor-pointer hover:border-opacity-100 border-opacity-0 transition-all duration-300 border-black border-b-2 border-transparent">
               Contact
             </h3>
-            <h3 className="cursor-pointer hover:border-opacity-100 border-opacity-0 transition-all duration-300 border-black border-b-2 border-transparent">
-              About Us
-            </h3>
+            <Link href={"/PrivacyPolicy"}>
+              <h3 className="cursor-pointer hover:border-opacity-100 border-opacity-0 transition-all duration-300 border-black border-b-2 border-transparent">
+                {`Privacy policy`}
+              </h3>
+            </Link>
           </div>
           <div className="mx-[2rem] flex gap-[1rem]">
             <button
