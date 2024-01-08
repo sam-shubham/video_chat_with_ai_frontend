@@ -61,14 +61,14 @@ export default function Home() {
     div.className = "flex justify-end bizgpt-response";
     h3.className =
       "text-lg max-w-[60%] bg-[#DBBE67] break-words text-white p-[0.5rem] md:p-[1rem] rounded-tl-xl rounded-br-xl rounded-bl-xl border-2 border-[rgba(0,0,0,0.05)]";
-    h3.innerHTML = `<div class="flex  md:gap-[0.5rem] gap-[0.3rem] py-[0.7rem] "><div
-    class="bg-[#000]  p-3   w-4 h-4 rounded-full  animate-bounce blue-circle" style="animation-delay: 0.1s;padding:0;width:1rem;height:1rem;"
+    h3.innerHTML = `<div className="flex  md:gap-[0.5rem] gap-[0.3rem] py-[0.7rem] "><div
+    className="bg-[#000]  p-3   w-4 h-4 rounded-full  animate-bounce blue-circle" style="animation-delay: 0.1s;padding:0;width:1rem;height:1rem;"
   ></div>
   <div
-    class="bg-[#000]  p-3  w-4 h-4 rounded-full animate-bounce green-circle" style="animation-delay: 0.3s;padding:0;width:1rem;height:1rem;"
+    className="bg-[#000]  p-3  w-4 h-4 rounded-full animate-bounce green-circle" style="animation-delay: 0.3s;padding:0;width:1rem;height:1rem;"
   ></div>
   <div
-    class="bg-[#000]  p-3   w-4 h-4 rounded-full animate-bounce red-circle" style="animation-delay: 0.5s;padding:0;width:1rem;height:1rem;"
+    className="bg-[#000]  p-3   w-4 h-4 rounded-full animate-bounce red-circle" style="animation-delay: 0.5s;padding:0;width:1rem;height:1rem;"
   ></div></div>`;
     div.appendChild(h3);
     setTimeout(() => {
@@ -79,16 +79,16 @@ export default function Home() {
         ?.getElementById("bizgpt-chatscreeen")
         ?.lastElementChild?.scrollIntoView({ behavior: "smooth" });
     }, 50);
-    //   document.getElementById("bizgpt-chatscreeen").appendChild(`<div class=" ">
+    //   document.getElementById("bizgpt-chatscreeen").appendChild(`<div className=" ">
     //   <h3
-    //     class=""
+    //     className=""
     //     style="font-family: 'rubik'"
     //   >${msg.trim()}</h3>
     // </div>`);
     // document.getElementById("bizgpt-chatscreeen")
-    //   .appendChild(`<div class="flex justify-end ">
+    //   .appendChild(`<div className="flex justify-end ">
     //   <h3
-    //   class="text-lg max-w-[60%] bg-[#083c83] break-words text-white p-[1rem] rounded-tl-xl rounded-br-xl rounded-bl-xl border-2 border-[rgba(0,0,0,0.05)]"
+    //   className="text-lg max-w-[60%] bg-[#083c83] break-words text-white p-[1rem] rounded-tl-xl rounded-br-xl rounded-bl-xl border-2 border-[rgba(0,0,0,0.05)]"
     //   style="font-family: 'rubik'"
     //   >...</h3>
     // </div>`);
@@ -368,7 +368,7 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
                 >
                   <div className="flex items-center justify-center text-[4rem]">
                     <h3>7</h3>
-                    <i class="text-[3rem] pt-[0.5rem] fi fi-br-plus-small flex items-center text-[#DBBE67]"></i>
+                    <i className="text-[3rem] pt-[0.5rem] fi fi-br-plus-small flex items-center text-[#DBBE67]"></i>
                   </div>
                   <div>
                     <h3
@@ -382,7 +382,7 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
                 <div className="flex items-end flex-col gap-1">
                   <div className="flex items-start justify-center text-[4rem]">
                     <h3>1</h3>
-                    <h3 class="text-[1.4rem] font-semibold pt-[1.3rem] flex items-center text-[#DBBE67]">
+                    <h3 className="text-[1.4rem] font-semibold pt-[1.3rem] flex items-center text-[#DBBE67]">
                       st
                     </h3>
                   </div>
@@ -398,7 +398,7 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
                 <div className="flex items-end flex-col gap-1">
                   <div className="flex items-start justify-center text-[4rem]">
                     <h3>24</h3>
-                    <h3 class="text-[1.4rem] font-semibold pt-[1.3rem] flex items-center text-[#DBBE67]">
+                    <h3 className="text-[1.4rem] font-semibold pt-[1.3rem] flex items-center text-[#DBBE67]">
                       Hours
                     </h3>
                   </div>
@@ -500,7 +500,7 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
                       className="/absolute whitespace-nowrap text-black right-2.5 md:min-w-[9rem]  bottom-2.5 md:py-[0.7rem] py-[0.5rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-md text-sm px-2 min-w-[30%] md:px-4 /py-2 "
                     >
                       Ask Question
-                      {/* <i class="fi fi-rs-paper-plane flex items-center"></i> */}
+                      {/* <i className="fi fi-rs-paper-plane flex items-center"></i> */}
                     </button>
                   </div>
                 </form>
@@ -612,14 +612,35 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
                                 ? el?.userSpecificLink
                                     .slice(0, 4)
                                     .map((el, indexussplin) => (
-                                      <a
-                                        href={el}
-                                        target="_blank"
+                                      <span
+                                        onClick={() => window.open(el)}
                                         key={Math.random() + indexussplin}
-                                        className="p-2 w-fit hover:text-[#ffef77] blue-600 flex   text-xs line-clamp-1 bg-[#a7914f]  text-white shadow-inner rounded-md transition-all duration-200"
+                                        className="p-2 w-fit hover:text-[#ffef77] cursor-pointer blue-600 flex gap-[0.3rem] items-center text-xs line-clamp-1 bg-[#a7914f]  text-white shadow-inner rounded-md transition-all duration-200"
                                       >
-                                        {el}
-                                      </a>
+                                        {(() => {
+                                          if (
+                                            new RegExp(
+                                              `^(https?\:\/\/)?((www\.)?youtube\.com|youtu\.be)\.+$`
+                                            ).test(el)
+                                          ) {
+                                            return (
+                                              <i className="fi fi-brands-youtube flex items-center text-red-500 text-xl" />
+                                            );
+                                          } else if (el.includes("24justice")) {
+                                            return (
+                                              <img
+                                                src="/24justice_orignal_withoutbg.png"
+                                                className="w-[2rem]"
+                                              />
+                                            );
+                                          } else {
+                                            return (
+                                              <i className="fi fi-ss-globe flex items-center text-xl"></i>
+                                            );
+                                          }
+                                        })()}
+                                        <h3>{el}</h3>
+                                      </span>
                                     ))
                                 : ""}
                             </div>
@@ -818,7 +839,7 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
                         className="/absolute text-black right-2.5 md:min-w-[9rem]  bottom-2.5 md:py-[0.7rem] py-[0.5rem] bg-[#DBBE67] hover:bg-[#bea559] focus:ring-4 focus:outline-none  font-medium rounded-lg md:text-md text-sm px-2 min-w-[30%] md:px-4 /py-2 "
                       >
                         Ask Question
-                        {/* <i class="fi fi-rs-paper-plane flex items-center"></i> */}
+                        {/* <i className="fi fi-rs-paper-plane flex items-center"></i> */}
                       </button>
                     </div>
                   </form>
