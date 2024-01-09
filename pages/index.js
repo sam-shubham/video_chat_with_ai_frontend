@@ -19,6 +19,18 @@ export default function Home() {
   const [SendingMail, setSendingMail] = useState(false);
   const [ShowBookingForm, setShowBookingForm] = useState(false);
   var randomfloatarray = useMemo(() => ["-7rem", "-7.5rem", "56.7rem"], []);
+  const [popularPrompts, setpopularPrompts] = useState([]);
+  useEffect(() => {
+    (async () => {
+      var axres = await axios.get("/api/getPopularPrompts").then((d) => d.data);
+      if (axres.status) {
+        setpopularPrompts(axres.allPopularPrompts);
+      } else {
+        console.error("Unable to fetch popular prompts!!");
+      }
+    })();
+  }, []);
+
   var randomfloatarraymobile = useMemo(
     () => ["-7rem", "-7.5rem", "56.7rem"],
     []
@@ -421,17 +433,34 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
             >
               Popular Prompts
             </h3>
-            <div className="flex md:flex-row flex-col md:pb-0 pb-[8rem] gap-[1rem] text-black">
-              <button
-                onClick={() => {
-                  setHomepage(false);
-                  sendmessage("How can I claim my inherited land in Pakistan?");
-                }}
-                className="p-3 bg-[#000] text-white hover:bg-[rgba(255,255,255,0.2)] hover:bg-[#DBBE67] transition-all duration-300 cursor-pointer rounded-md"
-              >
-                How can I claim my inherited land in Pakistan?
-              </button>
-              <button
+            <div className="flex md:flex-row flex-wrap flex-col md:pb-0 /pb-[8rem] gap-[1rem] text-black">
+              {popularPrompts[0] &&
+                popularPrompts.map((el, idx) => (
+                  <button
+                    key={
+                      (el.question || "") +
+                      String(Math.floor(Math.random() * 99999))
+                    }
+                    onClick={() => {
+                      setHomepage(false);
+                      sendmessage(el.question);
+                    }}
+                    data-aos="fade-up"
+                    data-aos-delay={100 * idx}
+                    style={{
+                      animationName: "littleanimatebg",
+                      animationTimingFunction: "ease-in",
+                      animationDelay: `${150 * (idx * 2)}ms`,
+                      animationDuration: "1s",
+                      transitionDuration: "300ms",
+                    }}
+                    className="p-3 /bg-[#000] text-white hover:bg-[rgba(255,255,255,0.2)] /hover:bg-[#DBBE67] transition-all duration-300 cursor-pointer rounded-md"
+                  >
+                    {el.question}
+                  </button>
+                ))}
+
+              {/* <button
                 onClick={() => {
                   setHomepage(false);
                   sendmessage("How can I file for a Divorce in Pakistan?");
@@ -450,7 +479,7 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
                 className="p-3 bg-[#000] text-white hover:bg-[rgba(255,255,255,0.2)] /hover:bg-[#DBBE67] transition-all duration-300 cursor-pointer rounded-md"
               >
                 Tell me more about Child Custody Laws in Pakistan?
-              </button>
+              </button> */}
             </div>
           </div>
           {/* <div className="block h-[3.5rem] w-full" /> */}

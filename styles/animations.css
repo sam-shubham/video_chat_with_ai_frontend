@@ -96,3 +96,15 @@
   /* animation-direction: forwards; */
   /* animation: 1s ease-in infinite forwards; */
 }
+
+@keyframes littleanimatebg {
+  0% {
+    background: rgba(0, 0, 0, 0);
+  }
+  50% {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0);
+  }
+}
