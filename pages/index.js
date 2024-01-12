@@ -433,7 +433,7 @@ gtag('config', 'G-P4JSKSFJD0');`}</Script>
             >
               Popular Prompts
             </h3>
-            <div className="flex md:flex-row flex-wrap flex-col md:pb-0 /pb-[8rem] gap-[1rem] text-black">
+            <div className="flex md:flex-row flex-wrap flex-col md:pb-0 pb-[8rem] gap-[1rem] text-black">
               {popularPrompts[0] &&
                 popularPrompts.map((el, idx) => (
                   <button
