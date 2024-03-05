@@ -23,7 +23,7 @@ async function getSementicSearch(query) {
         query,
       })
       .then((d) => d.data);
-
+    console.log(axres.data);
     return { data: axres.data, userSpecificLink: axres.userSpecificLink };
   } catch (error) {
     return "<<REFERENCES>>";
