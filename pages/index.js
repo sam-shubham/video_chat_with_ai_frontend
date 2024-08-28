@@ -188,7 +188,12 @@ export default function Home() {
           </svg>
         </div>
         {/* <!-- sub left --> */}
-        <div className="absolute rounded-full transition-all duration-[0.2s] ease-out scale-y-0 group-hover:scale-y-100 group-hover:-translate-x-16   flex  p-[10px] hover:p-[14px] bg-[#EDF3F7] scale-100 hover:bg-[#0B65C2] hover:text-white text-[#0B65C2]">
+        <div
+          onClick={() => {
+            router.push("https://www.linkedin.com/in/samshubham/");
+          }}
+          className="absolute rounded-full transition-all duration-[0.2s] ease-out scale-y-0 group-hover:scale-y-100 group-hover:-translate-x-16   flex  p-[10px] hover:p-[14px] bg-[#EDF3F7] scale-100 hover:bg-[#0B65C2] hover:text-white text-[#0B65C2]"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -201,7 +206,12 @@ export default function Home() {
           </svg>
         </div>
         {/* <!-- sub top --> */}
-        <div className="absolute rounded-full transition-all duration-[0.2s] ease-out scale-x-0 group-hover:scale-x-100 group-hover:-translate-y-16   flex  p-[10px] hover:p-[14px] bg-[#EDF3F7] scale-100 hover:bg-[#172F63] hover:text-white text-[#172F63]">
+        <div
+          onClick={() => {
+            router.push("https://github.com/sam-shubham");
+          }}
+          className="absolute rounded-full transition-all duration-[0.2s] ease-out scale-x-0 group-hover:scale-x-100 group-hover:-translate-y-16   flex  p-[10px] hover:p-[14px] bg-[#EDF3F7] scale-100 hover:bg-[#172F63] hover:text-white text-[#172F63]"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -214,7 +224,12 @@ export default function Home() {
           </svg>
         </div>
         {/* <!-- sub middle --> */}
-        <div className="absolute rounded-full transition-all duration-[0.2s] ease-out scale-x-0 group-hover:scale-x-100 group-hover:-translate-y-14 group-hover:-translate-x-14 flex  p-[10px] hover:p-[14px] bg-[#EDF3F7] scale-100 hover:bg-[#DE3411] hover:text-white text-[#DE3411]">
+        <div
+          onClick={() => {
+            router.push("https://shubham.appambient.com", {});
+          }}
+          className="absolute rounded-full transition-all duration-[0.2s] ease-out scale-x-0 group-hover:scale-x-100 group-hover:-translate-y-14 group-hover:-translate-x-14 flex  p-[10px] hover:p-[14px] bg-[#EDF3F7] scale-100 hover:bg-[#DE3411] hover:text-white text-[#DE3411]"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -636,7 +651,7 @@ export default function Home() {
                         {el.content}
                       </h3>
 
-                      {el.allowbuttons ? (
+                      {/* {el.allowbuttons ? (
                         <div className="flex gap-[1rem] justify-end mt-[0.3rem] md:p-3 md:mt-[0.5rem]">
                           <button
                             onClick={() => {
@@ -647,19 +662,11 @@ export default function Home() {
                           >
                             Talk to a Counsler
                           </button>
-                          {/* <button
-                            onClick={() => {
-                              window.open("https://adamglobal.com");
-                            }}
-                            className="bg-black text-white p-3 text-xs md:text-base rounded-md hover:scale-[1.03] transition-all duration-300"
-                            style={{ fontFamily: "rubik" }}
-                          >
-                            Claim free tax guide
-                          </button> */}
+                          
                         </div>
                       ) : (
                         <></>
-                      )}
+                      )} */}
                       {el.role != "user" && el?.userSpecificLink[0] ? (
                         <div className="flex justify-end flex-wrap ">
                           <div className="/bg-white p-2 flex flex-col gap-3 rounded-md w-full /max-w-[60%] text-black">
@@ -684,10 +691,10 @@ export default function Home() {
                                             return (
                                               <i className="fi fi-brands-youtube flex items-center text-red-500 text-xl" />
                                             );
-                                          } else if (el.includes("24justice")) {
+                                          } else if (el.includes("lpu")) {
                                             return (
                                               <img
-                                                src="/24justice_orignal_withoutbg.png"
+                                                src="/mainLogoCircle.png"
                                                 className="w-[2rem]"
                                               />
                                             );
@@ -902,17 +909,6 @@ export default function Home() {
                     </div>
                   </form>
                 </div>
-                {/* <div className="w-full flex flex-col gap-[0.5rem]">
-                <hr />
-                <div className="w-full flex justify-between">
-                  <div>
-                    <h3 className="md:max-w-max break-words text-xs my-[0.5rem]">
-                      {`Experience Pakistan's first AI-powered legal platform with
-                      24Justice`}
-                    </h3>
-                  </div>
-                </div>
-              </div> */}
               </div>
             </div>
           </div>
