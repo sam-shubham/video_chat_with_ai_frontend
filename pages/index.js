@@ -232,7 +232,7 @@ export default function Home() {
           <div className="flex md:justify-between gap-[1rem]  md:flex-row flex-col-reverse w-full min-h-[54vh] mt-[2.5rem] px-3 md:px-[2rem]">
             <div className="flex flex-col justify-between w-full md:w-[31rem]">
               <div className="flex flex-col " style={{ fontFamily: "poppins" }}>
-                <h3 className="text-[2rem]">{`LPU's First`}</h3>
+                <h3 className="text-[2rem]">LPU&apos;s First</h3>
                 <h3
                   className="text-[3rem] leading-[1]"
                   style={{ fontFamily: "rubik" }}
@@ -246,7 +246,10 @@ export default function Home() {
                 style={{ fontFamily: "poppins" }}
               >
                 <h3>
-                  {`This is an UNOFFICIAL AI Assistant for Lovely Professional University (LPU). All the information provided is based on LPU's official websites. For the most accurate & latest info refer to LPU's official channels.`}
+                  This is an UNOFFICIAL AI Assistant for Lovely Professional
+                  University (LPU). All the information provided is based on
+                  LPU&apos;s official websites. For the most accurate & latest
+                  info refer to LPU&apos;s official channels.
                 </h3>
                 <span className="whitespace-nowrap flex gap-[0rem] flex-wrap mt-3">
                   <h3>{`This bot was developed by `}</h3>
@@ -468,7 +471,7 @@ export default function Home() {
               className="text-[2rem] text-[#FF7E00]"
               style={{ fontFamily: "rubik" }}
             >
-              Let's Get Started
+              Let&apos;s Get Started
             </h3>
             <div className="flex md:flex-row flex-wrap flex-col md:pb-0 pb-[8rem] gap-[1rem] text-black">
               {popularPrompts[0] &&
