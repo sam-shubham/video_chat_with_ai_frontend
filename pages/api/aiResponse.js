@@ -19,9 +19,14 @@ const openai = new OpenAIApi(configuration);
 async function getSementicSearch(query) {
   try {
     var axres = await axios
-      .post("http://localhost:4090/api/ScrapWebsite/querySementicSearch", {
-        query,
-      })
+      .post(
+        `${
+          process.env.ADMIN_URI || "http://localhost:4090"
+        }/api/ScrapWebsite/querySementicSearch`,
+        {
+          query,
+        }
+      )
       .then((d) => d.data);
     return { data: axres.data, userSpecificLink: axres.userSpecificLink };
   } catch (error) {
