@@ -25,9 +25,7 @@ const MailSent = () => {
           >
             Thank you for sending us your case information. One of our
             specialists will get back to you via WhatsApp or Email. Please
-            ensure your phone number is correct (including country code) For an
-            immediate response, you can call us (or message us via WhatsApp)
-            direct via our hotline +92 308 551 0031
+            ensure your phone number is correct (including country code)
           </h3>
         </div>
         <div>
@@ -40,46 +38,11 @@ const MailSent = () => {
           <div className="flex items-center justify-center mt-[2rem]">
             <div className="flex gap-[1.5rem]">
               <button
-                onClick={() => {
-                  window.open("https://wa.me/+923085510031");
-                }}
-              >
-                <i class="fi fi-brands-whatsapp flex items-center text-3xl text-white hover:text-[#DBBE67] transition-all duration-300 cursor-pointer"></i>
-              </button>
-              <button
                 onClick={() =>
-                  window.open("https://pk.linkedin.com/company/24justice.pk")
+                  window.open("https://www.linkedin.com/in/itzsamshubham/")
                 }
               >
                 <i class="fi fi-brands-linkedin flex items-center text-3xl text-white hover:text-[#DBBE67] transition-all duration-300 cursor-pointer"></i>
-              </button>
-              <button
-                onClick={() =>
-                  window.open("https://m.facebook.com/24Justice.pk/")
-                }
-              >
-                <i class="fi fi-brands-facebook flex items-center text-3xl text-white hover:text-[#DBBE67] transition-all duration-300 cursor-pointer"></i>
-              </button>
-              <button
-                onClick={() => window.open("https://twitter.com/24Justicepk")}
-              >
-                <i class="fi fi-brands-twitter flex items-center text-3xl text-white hover:text-[#DBBE67] transition-all duration-300 cursor-pointer"></i>
-              </button>
-              <button
-                onClick={() =>
-                  window.open("https://www.instagram.com/24justice.pk/")
-                }
-              >
-                <i class="fi fi-brands-instagram flex items-center text-3xl text-white hover:text-[#DBBE67] transition-all duration-300 cursor-pointer"></i>
-              </button>
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://youtube.com/c/24JusticeLawyersandLegalServices"
-                  )
-                }
-              >
-                <i class="fi fi-brands-youtube flex items-center text-3xl text-white hover:text-[#DBBE67] transition-all duration-300 cursor-pointer"></i>
               </button>
             </div>
           </div>

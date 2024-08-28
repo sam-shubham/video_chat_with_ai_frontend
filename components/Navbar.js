@@ -6,7 +6,7 @@ const Navbar = () => {
   var router = useRouter();
   return (
     <div>
-      <div className=" bg-[#000] z-[10] md:flex fixed left-[50%] translate-x-[-50%] w-[100%] justify-center py-[0.6rem] /w-[70%]">
+      {/* <div className=" bg-[#000] z-[10] md:flex fixed left-[50%] translate-x-[-50%] w-[100%] justify-center py-[0.6rem] /w-[70%]">
         <div className="flex bg-[#000] md:gap-[5rem] px-[2rem] w-full justify-center md:justify-between items-center mt-[0.5rem]">
           <div
             className="font-semibold hidden md:flex gap-[2rem]"
@@ -88,18 +88,9 @@ const Navbar = () => {
             >
               <i className="fi fi-brands-youtube flex items-center text-xl text-white hover:text-[#DBBE67] transition-all duration-300 cursor-pointer"></i>
             </button>
-
-            {/* <div className="flex gap-[0.7rem] items-center">
-              <button
-                style={{ fontFamily: "kanit" }}
-                className=" px-[1.4rem] py-[0.8rem] hover:scale-[1.05] transition-all duration-200 text-white rounded-md bg-[#083c83]  "
-              >
-                Free Tax Consultation
-              </button>
-            </div> */}
           </div>
         </div>
-      </div>
+      </div> */}
       {/* <div className="block md:hidden bg-[#000] pt-[1rem]">
         <div className="flex gap-[5rem] justify-center items-center mt-[0.5rem]">
           <div className="flex  flex-col items-center justify-center">

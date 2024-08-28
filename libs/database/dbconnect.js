@@ -4,7 +4,7 @@ var MONGODB_URI = "";
 // if (process.env.NODE_ENV == "development") {
 // MONGODB_URI = "mongodb://localhost:27017/bizgpt";
 // } else {
-MONGODB_URI = "mongodb://aditya:mongodbaditya1234@62.72.6.101:27017/24justice";
+MONGODB_URI = process.env.MONGODB_URI;
 // }
 // mongoose.set("strictQuery", false);
 // if (!MONGODB_URI) {
