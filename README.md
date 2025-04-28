@@ -2,6 +2,11 @@
 
 Welcome to the backend repository for the **Personalized Video Chat AI** project! This backend powers an innovative educational platform that delivers emotionally intelligent, real-time video tutoring using advanced AI technologies. Built with scalability and performance in mind, it integrates seamlessly with the frontend to provide a robust user experience.
 
+## 🔗 Related Repositories
+
+- **Backend Repository**: [samshubham/video_chat_with_ai_backend](https://github.com/samshubham/video_chat_with_ai_backend)  
+  The backend logic powering the Personalized Video Chat AI system, featuring API management and AI services.
+
 ## 📖 Overview
 
 This repository (`sam-shubham/video_chat_with_ai_backend`) contains the backend logic for the Personalized Video Chat AI system. It handles API requests, AI model orchestration, database management, and real-time communication services to support interactive video tutoring.
