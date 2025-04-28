@@ -4,7 +4,7 @@ Welcome to the backend repository for the **Personalized Video Chat AI** project
 
 ## 🔗 Related Repositories
 
-- **Backend Repository**: [samshubham/video_chat_with_ai_backend](https://github.com/samshubham/video_chat_with_ai_backend)  
+- **Backend Repository**: [sam-shubham/video_chat_with_ai_backend](https://github.com/sam-shubham/video_chat_with_ai_backend)  
   The backend logic powering the Personalized Video Chat AI system, featuring API management and AI services.
 
 ## 📖 Overview
