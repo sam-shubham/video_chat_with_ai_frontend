@@ -1,43 +1,97 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personalized Video Chat AI Backend 🚀
 
-## Getting Started
+Welcome to the backend repository for the **Personalized Video Chat AI** project! This backend powers an innovative educational platform that delivers emotionally intelligent, real-time video tutoring using advanced AI technologies. Built with scalability and performance in mind, it integrates seamlessly with the frontend to provide a robust user experience.
 
-First, run the development server:
+## 📖 Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+This repository (`sam-shubham/video_chat_with_ai_backend`) contains the backend logic for the Personalized Video Chat AI system. It handles API requests, AI model orchestration, database management, and real-time communication services to support interactive video tutoring.
 
+🔗 **Frontend Repository**: [sam-shubham/video_chat_with_ai_fronted](https://github.com/sam-shubham/video_chat_with_ai_fronted)
 
+## ✨ Features
 
+- **API Gateway** 🌐: Manages communication between frontend and backend services with authentication, routing, and load balancing.
+- **Large Language Model (LLM)** 🧠: Powers conversational abilities with dynamic retraining on custom datasets (e.g., NPTEL courses).
+- **Vector Database (ChromaDB)** 📊: Stores vector embeddings for efficient semantic search across educational content.
+- **Emotion & Face Recognition** 😊: Analyzes facial expressions and identifies users for personalized responses.
+- **MongoDB Integration** 🗄️: Stores user profiles, interaction history, and academic progress.
+- **Scalable Architecture** ⚙️: Deployed on Vercel with Next.js for optimized performance and concurrent user support.
 
-.
-```
+## 🛠️ Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Framework**: Next.js (v13.4.4)
+- **Database**: MongoDB, ChromaDB
+- **AI Libraries**: LangChain, OpenAI, Pinecone
+- **Other Tools**: Axios, Multer, TailwindCSS
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 📦 Installation
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+1. **Clone the repository**:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+   ```bash
+   git clone https://github.com/sam-shubham/video_chat_with_ai_backend.git
+   cd video_chat_with_ai_backend
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. **Install dependencies**:
 
-## Learn More
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Set up environment variables**:
+   Create a `.env` file in the root directory and add the necessary variables (e.g., database URI, API keys).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+   The server will run on `http://localhost:4090`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 📝 Usage
 
-## Deploy on Vercel
+- Use the API endpoints to interact with the AI services (e.g., emotion recognition, semantic search).
+- Connect the backend with the frontend for a complete video chat experience.
+- Deploy the backend on Vercel for production use.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 👨‍💻 Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Shubham Samrat**  
+📧 Email: [mrshubhamsamrat05@gmail.com](mailto:mrshubhamsamrat05@gmail.com)  
+🌐 Website: [sam.appambient.com](https://sam.appambient.com)  
+GitHub: [sam-shubham](https://github.com/sam-shubham)
+
+## 📜 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+We welcome contributions to enhance the Personalized Video Chat AI backend! Follow these steps to contribute:
+
+1. **Fork the repository** 🍴.
+2. **Create a new branch** for your feature or bug fix:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Make your changes** and commit them:
+   ```bash
+   git commit -m "Add your commit message"
+   ```
+4. **Push to your fork**:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. **Open a Pull Request** 📬 with a detailed description of your changes.
+
+Please ensure your code follows the project's coding standards and includes relevant tests.
+
+## 🌟 Acknowledgments
+
+- Thanks to the team at Lovely Professional University for their support.
+- Kudos to the open-source community for providing amazing tools and libraries!
+
+---
+
+**Happy Coding!** 💻  
+For any queries, feel free to reach out to the author.
